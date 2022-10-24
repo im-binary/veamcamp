@@ -1,0 +1,226 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to top, #00122e, #002659, #003a88, #004eb9, #63b2da);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 10px;
+}
+
+.cover {
+  background-image: url("./images/sea.jpeg");
+  padding-top: 30%;
+  background-position: center 60%;
+  filter: blur(1px);
+}
+
+.timeline-title {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 2px;
+}
+
+section.timeline-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.timeline-item-container {
+  position: relative;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
+}
+
+.timeline-item-container:nth-child(odd) {
+  padding: 30px 50px 30px 0px;
+  border-right: 4px solid;
+  margin-left: 2px;
+}
+
+.timeline-item-container:nth-child(even) {
+  margin-left: auto;
+  padding: 30px 0px 30px 50px;
+  border-left: 4px solid;
+  margin-right: 2px;
+}
+
+.timeline-item-container::after {
+  position: absolute;
+  top: calc(50% - (23px / 2));
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 4px solid;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.timeline-item-container.pikeeel::after {
+  top: 38%;
+}
+
+.timeline-item-container.dolphin::after {
+  top: 10%;
+}
+
+.timeline-item-container.giant-squid::after {
+  top: 10%;
+}
+
+.timeline-item-container.whale::after {
+  top: 10%;
+}
+
+.timeline-item-container:nth-child(even)::after {
+  left: -13.5px;
+}
+
+.timeline-item-container:nth-child(odd)::after {
+  right: -13.5px;
+}
+
+.timeline-item-container.hippocampus {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.timeline-item-container.starfish {
+  padding-bottom: 200px;
+}
+
+.timeline-item-container.pikeeel {
+  padding-bottom: 350px;
+}
+
+.timeline-item-container.dolphin {
+  padding-bottom: 900px;
+}
+
+.timeline-item-container.giant-squid {
+  padding-bottom: 900px;
+}
+
+.timeline-item-container.whale {
+  padding-bottom: 900px;
+}
+
+.timeline-item-line {
+  position: absolute;
+  top: calc(50% - (23px / 2));
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.pikeeel .timeline-item-line {
+  top: 38%;
+}
+
+.dolphin .timeline-item-line {
+  top: 10%;
+}
+
+.giant-squid .timeline-item-line {
+  top: 10%;
+}
+
+.whale .timeline-item-line {
+  top: 10%;
+}
+
+.timeline-item-line.right {
+  right: -100px;
+}
+
+.timeline-item-line.left {
+  left: -100px;
+}
+
+.timeline-item-image {
+  position: absolute;
+}
+
+.timeline-item-image.image-hippocampus {
+  top: 80px;
+  right: 40px;
+  width: 80px;
+}
+
+.timeline-item-image.image-starfish {
+  top: 0px;
+  left: 20px;
+  width: 80px;
+}
+
+.timeline-item-image.image-pikeeel {
+  top: -30px;
+  right: 40px;
+  width: 150px;
+}
+
+.timeline-item-image.image-dolphin {
+  left: -70px;
+  bottom: 100px;
+  width: 600px;
+}
+
+.timeline-item-image.image-giant-squid {
+  right: -100%;
+  bottom: 150px;
+  width: 800px;
+}
+
+.timeline-item-image.image-whale {
+  left: -100%;
+  bottom: 0px;
+  width: 1000px;
+}
+
+.timeline-item {
+  border-radius: 20px;
+  padding: 20px 30px;
+  background: #e4e4e43d;
+}
+
+.timeline-item-title {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.timeline-item-description {
+  height: 100px;
+  overflow: scroll;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
