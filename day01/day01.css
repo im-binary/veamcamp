@@ -19,32 +19,13 @@ ul {
   font-size: 10px;
 }
 
-.cover {
-  background-image: url("./images/sea.jpeg");
-  padding-top: 30%;
-  background-position: center 60%;
-  filter: blur(1px);
-}
-
 .timeline-title {
-  position: absolute;
-  top: 29%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-weight: bold;
-  width: 80%;
+  margin: 0;
   padding: 20px;
   text-align: center;
-}
-
-.cover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 2px;
-  height: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-weight: bold;
 }
 
 section.timeline-wrapper {
