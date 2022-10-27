@@ -1,0 +1,152 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-color: #dddddd;
+}
+
+.wrapper {
+  min-height: calc(100vh - 70px);
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+.intro-section {
+  background-image: url(./images/header-bg.png);
+  background-position: center;
+  padding: 0 40px;
+}
+
+.intro-container {
+  border: 18px solid #ffa500;
+  border-bottom: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px 0;
+  color: #ffa500;
+  overflow: hidden;
+}
+
+.intro-container .itro-bold-title {
+  font-weight: bold;
+}
+
+.intro-container .itro-title {
+  display: inline-block;
+  margin: 0;
+  border-bottom: 2px solid;
+  letter-spacing: 0.7rem;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+.intro-content-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.intro-content-container .intro-explanation {
+  margin: 50px 300px 40px 0;
+  line-height: 1.7;
+  font-size: 1.6rem;
+}
+
+.intro-content-container::after {
+  display: inline-block;
+  position: absolute;
+  top: -44px;
+  right: 0;
+  content: "";
+  background-image: url(./images/container-bg.png);
+  background-position: center;
+  width: 290px;
+  height: 408px;
+  background-repeat: no-repeat;
+}
+
+.media-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.media-item-container {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px 1px #57575733;
+}
+
+.media-item-container .media-item-img {
+  width: 100%;
+}
+
+.media-item-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid #ffa600;
+  background-color: #fff;
+}
+
+.media-item-title-container .media-item-title {
+  margin-left: 15px;
+  color: #ffa600;
+}
+
+.media-item-title-container .media-item-button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.media-item-title-container .media-item-button-img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  border-top: 2px solid #c0c0c1;
+  background-color: #fff;
+  color: #cfcfcf;
+  letter-spacing: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1280px) {
+  .media-container {
+    padding: 0 40px;
+  }
+}
