@@ -1,15 +1,32 @@
-html,
-body {
+/* Resets */
+
+body,
+p {
   margin: 0;
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: inherit;
 }
 
-:root {
-  font-size: 10px;
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 ul {
@@ -22,8 +39,14 @@ img {
   display: block;
 }
 
+/* Typography */
+
+:root {
+  font-size: 10px;
+}
+
 body {
-  background-color: #dddddd;
+  background-color: #fff;
 }
 
 /* layout */
@@ -35,9 +58,10 @@ body {
 }
 
 .wrapper {
-  min-height: calc(100vh - 70px);
-  margin: 0 auto;
-  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ddd;
 }
 
 .header {
@@ -47,18 +71,18 @@ body {
 }
 
 .intro {
-  border: 18px solid #ffa500;
-  border-bottom: 0;
-  padding: 40px 40px 0;
   color: #ffa500;
+  border-width: 18px 18px 0 18px;
+  border-style: solid;
+  padding: 40px;
   overflow: hidden;
+  position: relative;
 }
 
 .intro-title {
   display: inline-block;
-  margin: 0;
   border-bottom: 2px solid;
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.2em;
   font-weight: normal;
   font-size: 3rem;
 }
@@ -67,17 +91,11 @@ body {
   font-weight: bold;
 }
 
-.intro-main {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
 .intro-main::after {
-  display: inline-block;
   position: absolute;
-  top: -44px;
+  top: 0;
   right: 0;
+  margin: 40px;
   content: "";
   background-image: url(./images/container-bg.png);
   background-position: center;
@@ -106,6 +124,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 2px 2px 6px 1px #57575733;
+  background-color: #fff;
 }
 
 .media-item-cover {
@@ -116,35 +135,32 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 4px solid #ffa600;
-  background-color: #fff;
+  color: #ffa600;
+  border-top: 4px solid;
 }
 
 .media-item-title {
   margin-left: 15px;
-  color: #ffa600;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .media-item-play {
-  border: 0;
-  padding: 0;
   background-color: transparent;
   background-image: url(./images/play.png);
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
 }
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
+  padding: 20px 0;
+  text-align: center;
   border-top: 2px solid #c0c0c1;
   background-color: #fff;
   color: #cfcfcf;
-  letter-spacing: 1.4rem;
+  letter-spacing: 0.6em;
   font-size: 1.4rem;
   font-weight: bold;
+  margin-top: auto;
 }
