@@ -1,0 +1,253 @@
+/* reset */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤딩 태그에 있는 기본 스타일 알아보기 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+}
+
+:root {
+  font-size: 10px;
+}
+
+:root {
+  --main-blue-color: #0263a6;
+  --main-skyblue-color: #0490d2;
+  --main-gray-color: #f0f0f0;
+  --main-white-color: #feffff;
+  --sub-gray-color: #dddddd;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* layout */
+
+body {
+  background-color: var(--main-gray-color);
+}
+
+/* header */
+
+.header {
+  background-color: var(--main-blue-color);
+  padding: 0 30px;
+}
+
+.header-layout {
+  margin: 0 auto;
+  padding: 40px 0px 100px;
+  max-width: 1200px;
+}
+
+.wrapper {
+  padding: 0 30px;
+}
+
+/* main */
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  background-color: var(--main-white-color);
+}
+
+/* menu */
+
+.menu {
+  display: flex;
+  margin-top: -62px;
+  height: 62px;
+  background-color: var(--main-skyblue-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0px 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: var(--main-blue-color);
+}
+
+.menu-item.active {
+  background-color: var(--main-white-color);
+  color: #000;
+}
+
+.menu::after {
+  content: " ";
+  width: 300px;
+  height: 230px;
+  margin-top: -168px;
+  margin-left: auto;
+  margin-right: -40px;
+  background-image: url(./images/wave.png);
+  background-repeat: no-repeat;
+}
+
+/* content */
+
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.content-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.content-layout + .content-layout {
+  border-top: 2px dashed var(--main-gray-color);
+}
+
+.content-cover {
+  width: 400px;
+  height: 160px;
+}
+
+.content-info-title {
+  font-size: 2.4rem;
+  color: var(--main-skyblue-color);
+  margin-bottom: 10px;
+}
+
+.content-info-description {
+  word-break: keep-all;
+  color: #727272;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+/* sub-menu */
+
+.sub-menu {
+  padding: 20px 0;
+}
+
+.sub-menu-title {
+  color: var(--main-skyblue-color);
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.sub-menu-list {
+  border-left: 4px solid var(--sub-gray-color);
+  padding-left: 10px;
+}
+
+.sub-menu-list-item {
+  color: #727272;
+  font-weight: 600;
+  padding: 4px 0;
+  font-size: 1.8rem;
+}
+
+/* footer */
+
+.footer {
+  background-color: #202124;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.footer-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.footer-menu-layout {
+  display: flex;
+  color: #fff;
+}
+
+.footer-menu {
+  margin: 0 30px;
+}
+
+.footer-menu-title {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.footer-menu-item {
+  font-size: 1.4rem;
+  color: #666667;
+}
+
+.footer-menu-icon {
+  background-image: url(./images/icon-sprite.png);
+  background-position: left top;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-indent: -99999px;
+}
+
+.footer-menu-icon.twitter:hover {
+  background-position: left bottom;
+}
+
+.footer-menu-icon.facebook {
+  background-position: center top;
+}
+
+.footer-menu-icon.facebook:hover {
+  background-position: center bottom;
+}
+
+.footer-menu-icon.pinterest {
+  background-position: right top;
+}
+
+.footer-menu-icon.pinterest:hover {
+  background-position: right bottom;
+}
+
+.footer-menu-icon + .footer-menu-icon {
+  margin-left: 4px;
+}
