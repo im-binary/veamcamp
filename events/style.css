@@ -41,6 +41,8 @@ button {
   --content-bg-color: #fefeff;
 }
 
+/* 상태에 따른 다른 UI */
+
 .event.soldout .event-content-state-ing,
 .event.soldout .event-content-participation {
   display: none;
