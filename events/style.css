@@ -29,6 +29,10 @@ button {
   color: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   font-size: 10px;
 }
@@ -39,31 +43,7 @@ button {
   --light-purple: #f1e0f8;
   --purple: #673399;
   --content-bg-color: #fefeff;
-}
-
-/* 상태에 따른 다른 UI */
-
-.event.soldout .event-content-state-ing,
-.event.soldout .event-content-participation {
-  display: none;
-}
-
-.event.ing .event-state-soldout {
-  display: none;
-}
-
-/* cover */
-
-.event-wrapper .row > li:nth-child(1) .event-cover {
-  background-image: url(./images/cover01.png);
-}
-
-.event-wrapper .row > li:nth-child(2) .event-cover {
-  background-image: url(./images/cover02.png);
-}
-
-.event-wrapper .row > li:nth-child(3) .event-cover {
-  background-image: url(./images/cover03.png);
+  --state-box: 68px;
 }
 
 /* layout */
@@ -91,6 +71,11 @@ body {
 
 .row.auto-width .col {
   width: auto;
+}
+
+.row.align-center {
+  align-items: center;
+  height: 100%;
 }
 
 .half .col {
@@ -138,19 +123,19 @@ body {
 .event {
   background-color: #fff;
   box-shadow: 1px 1px 6px 1px #72727242;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.event-cover {
-  background-size: cover;
-  height: 250px;
-  background-repeat: no-repeat;
-  background-position: center;
+.event-cover img {
+  width: 100%;
+  vertical-align: bottom;
 }
 
 .event-content {
   padding: var(--gap);
-  padding-bottom: 0;
-  height: 330px;
+  padding-bottom: var(--state-box);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -161,25 +146,22 @@ body {
   margin: 24px 0 32px;
   font-size: 2.4rem;
   font-weight: bold;
+  height: 60px;
 }
 
 .event-content-description {
-  height: 85px;
+  /* height: 85px; */
   font-size: 1.4rem;
   color: var(--gray);
   margin-bottom: var(--gap);
 }
 
-.event-content-stack-list .row {
-  margin: 0;
+.event-content-stack-list {
+  display: flex;
+  gap: 4px;
 }
 
-.event-content-stack-list .row .col {
-  padding: 0;
-  padding-right: 4px;
-}
-
-.event-content-stack {
+.event-content-stack a {
   padding: 4px 6px;
   border-radius: 4px;
   background-color: var(--light-purple);
@@ -189,26 +171,27 @@ body {
 }
 
 .event-content-state {
-  height: 68px;
+  height: var(--state-box);
   color: var(--gray);
   border-top: 4px solid;
   font-size: 1.2rem;
   font-weight: bold;
   margin-right: calc(-1 * var(--gap));
-}
-
-.event-content-state .row {
-  height: 100%;
-  align-items: center;
-  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: var(--gap);
+  right: var(--gap);
+  width: 100%;
 }
 
 .event-content-participation {
-  padding-right: var(--gap);
+  height: 100%;
 }
 
-.event-content-participation .row .col {
-  padding: 0;
+.event-content-participation {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: calc(2 * var(--gap));
 }
 
 .event-content-participation-item img {
