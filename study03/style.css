@@ -54,6 +54,14 @@ ul {
 
 /* layout */
 
+.l_container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 30px;
+}
+
+/* components */
+
 body {
   background-color: var(--main-gray-color);
   display: flex;
@@ -65,64 +73,62 @@ body {
 
 .header {
   background-color: var(--main-blue-color);
-  padding: 0 30px;
 }
 
 .header-layout {
-  margin: 0 auto;
-  padding: 40px 0px 100px;
-  max-width: 1200px;
+  position: relative;
 }
 
-.wrapper {
-  padding: 0 30px;
-}
-
-/* main */
-
-.main {
-  max-width: 1200px;
-  margin: 0 auto 50px;
-  background-color: var(--main-white-color);
+.header-logo {
+  display: inline-block;
+  padding: 40px 0;
 }
 
 /* menu */
 
-.menu {
+.header-menu {
   display: flex;
-  margin-top: -62px;
-  height: 62px;
   background-color: var(--main-skyblue-color);
   font-size: 1.6rem;
   font-weight: 700;
 }
 
-.menu-item {
+.header-menu-item a {
+  height: 62px;
   display: flex;
   align-items: center;
   padding: 0px 26px;
   color: #fff;
-  cursor: pointer;
 }
 
-.menu-item:hover {
+.header-menu-item a:hover {
   background-color: var(--main-blue-color);
 }
 
-.menu-item.active {
+.header-menu-item a.active {
   background-color: var(--main-white-color);
   color: #000;
 }
 
-.menu::after {
+.header-menu::after {
   content: " ";
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 300px;
   height: 230px;
-  margin-top: -168px;
-  margin-left: auto;
   margin-right: -40px;
   background-image: url(./images/wave.png);
   background-repeat: no-repeat;
+}
+
+.wrapper {
+}
+
+/* main */
+
+.main {
+  background-color: var(--main-white-color);
 }
 
 /* content */
@@ -202,7 +208,6 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1200px;
 }
 
 .footer-menu-layout {
@@ -226,31 +231,26 @@ body {
 
 .footer-menu-icon {
   background-image: url(./images/icon-sprite.png);
-  background-position: left top;
   width: 30px;
   height: 30px;
   cursor: pointer;
   text-indent: -99999px;
 }
 
-.footer-menu-icon.twitter:hover {
-  background-position: left bottom;
+.footer-menu-icon.twitter {
+  background-position: left top;
 }
 
 .footer-menu-icon.facebook {
   background-position: center top;
 }
 
-.footer-menu-icon.facebook:hover {
-  background-position: center bottom;
-}
-
 .footer-menu-icon.pinterest {
   background-position: right top;
 }
 
-.footer-menu-icon.pinterest:hover {
-  background-position: right bottom;
+.footer-menu-icon:hover {
+  background-position-y: bottom;
 }
 
 .footer-menu-icon + .footer-menu-icon {
