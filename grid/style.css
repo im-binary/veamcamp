@@ -1,0 +1,95 @@
+/* Reset */
+
+body,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* Layout */
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: blueviolet;
+}
+
+.l_row {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: black;
+}
+
+.l_col {
+  background-color: gray;
+}
+
+.l_col_12_12 {
+  grid-column: span 12;
+}
+
+.l_col_11_12 {
+  grid-column: span 11;
+}
+
+.l_col_10_12 {
+  grid-column: span 10;
+}
+
+.l_col_9_12 {
+  grid-column: span 9;
+}
+
+.l_col_8_12 {
+  grid-column: span 8;
+}
+
+.l_col_7_12 {
+  grid-column: span 7;
+}
+
+.l_col_6_12 {
+  grid-column: span 6;
+}
+
+.l_col_5_12 {
+  grid-column: span 5;
+}
+
+.l_col_4_12 {
+  grid-column: span 4;
+}
+
+.l_col_3_12 {
+  grid-column: span 3;
+}
+
+.l_col_2_12 {
+  grid-column: span 2;
+}
+
+.l_col_1_12 {
+  grid-column: span 1;
+}
+
+/* Component */
+
+.frog {
+  text-align: center;
+}
+
+.frog img {
+  max-width: 100%;
+  object-fit: cover;
+}
