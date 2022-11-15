@@ -1,2 +1,221 @@
+/* Reset */
 
+body,
+ul {
+  padding: 0;
+  margin: 0;
+}
 
+h1,
+h2,
+p {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+:root {
+  --gap: 20px;
+}
+
+/* Layout */
+
+.l_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-1 * (var(--gap) / 2));
+  row-gap: var(--gap);
+}
+
+.l_col {
+  box-sizing: border-box;
+  padding: 0 calc((var(--gap) / 2));
+}
+
+.l_col_12_12 {
+  width: 100%;
+}
+.l_col_11_12 {
+  width: 91.66666667%;
+}
+.l_col_10_12 {
+  width: 83.33333333%;
+}
+.l_col_9_12 {
+  width: 75%;
+}
+.l_col_8_12 {
+  width: 66.66666667%;
+}
+.l_col_7_12 {
+  width: 58.33333333%;
+}
+.l_col_6_12 {
+  width: 50%;
+}
+.l_col_5_12 {
+  width: 41.66666667%;
+}
+.l_col_4_12 {
+  width: 33.33333333%;
+}
+.l_col_3_12 {
+  width: 25%;
+}
+.l_col_2_12 {
+  width: 16.66666667%;
+}
+.l_col_1_12 {
+  width: 8.33333333%;
+}
+
+.l_wrapper {
+  max-width: 1200px;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+}
+
+/* Common */
+
+.l_button-wrapper {
+  display: flex;
+  gap: var(--gap);
+  box-sizing: border-box;
+}
+
+.button-prev,
+.button-next {
+  width: 50%;
+  padding: 10px 0;
+  background-color: #ffd700;
+}
+
+/* Component */
+
+.main,
+.content {
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+.main {
+  position: relative;
+}
+
+.main-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.main-title {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 5vw;
+  margin-left: 14px;
+}
+
+.content {
+  padding: var(--gap);
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.content-introduce,
+.content-gallery {
+  margin-bottom: var(--gap);
+}
+
+.content-introduce-title,
+.content-gallery-title {
+  font-size: 2.4rem;
+  margin-bottom: var(--gap);
+}
+
+.content-introduce-desc {
+  font-size: 1.6rem;
+}
+
+.content-gallery-cover {
+  max-width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .l_wrapper {
+    flex-direction: column;
+  }
+
+  .main,
+  .content {
+    width: 100%;
+  }
+
+  .main {
+    height: 35vh;
+  }
+
+  .content {
+    overflow: visible;
+  }
+
+  .l_col_mobile_12_12 {
+    width: 100%;
+  }
+  .l_col_mobile_11_12 {
+    width: 91.66666667%;
+  }
+  .l_col_mobile_10_12 {
+    width: 83.33333333%;
+  }
+  .l_col_mobile_9_12 {
+    width: 75%;
+  }
+  .l_col_mobile_8_12 {
+    width: 66.66666667%;
+  }
+  .l_col_mobile_7_12 {
+    width: 58.33333333%;
+  }
+  .l_col_mobile_6_12 {
+    width: 50%;
+  }
+  .l_col_mobile_5_12 {
+    width: 41.66666667%;
+  }
+  .l_col_mobile_4_12 {
+    width: 33.33333333%;
+  }
+  .l_col_mobile_3_12 {
+    width: 25%;
+  }
+  .l_col_mobile_2_12 {
+    width: 16.66666667%;
+  }
+  .l_col_mobile_1_12 {
+    width: 8.33333333%;
+  }
+}
