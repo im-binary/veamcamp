@@ -34,6 +34,10 @@ button {
   font-size: 62.5%;
 }
 
+body {
+  font-size: 1.6rem;
+}
+
 :root {
   --gap: 20px;
 }
@@ -89,38 +93,33 @@ button {
   width: 8.33333333%;
 }
 
-.l_wrapper {
-  max-width: 1200px;
-  min-height: 100vh;
-  height: 100vh;
-  display: flex;
-}
-
 /* Common */
 
-.l_button-wrapper {
-  display: flex;
-  gap: var(--gap);
-  box-sizing: border-box;
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffd700;
 }
 
-.button-prev,
-.button-next {
-  width: 50%;
-  padding: 10px 0;
-  background-color: #ffd700;
+.button_prev {
+  text-align: left;
+}
+.button_next {
+  text-align: right;
 }
 
 /* Component */
 
-.main,
-.content {
+.main {
   width: 50%;
   font-size: 1.6rem;
+  position: fixed;
+  height: 100vh;
 }
 
-.main {
-  position: relative;
+.content {
+  margin-left: 50vw;
+  max-width: 800px;
 }
 
 .main-cover {
@@ -144,22 +143,28 @@ button {
   overflow: scroll;
 }
 
-.content-introduce,
-.content-gallery {
+.section {
   margin-bottom: var(--gap);
 }
 
-.content-introduce-title,
-.content-gallery-title {
+.section + .section {
+  margin-top: var(--gap);
+}
+
+.section-title {
   font-size: 2.4rem;
   margin-bottom: var(--gap);
 }
 
-.content-introduce-desc {
+.section-description {
   font-size: 1.6rem;
 }
 
-.content-gallery-cover {
+.section-footer {
+  margin-top: var(--gap);
+}
+
+.coffee {
   max-width: 100%;
   height: 100%;
 }
@@ -167,19 +172,6 @@ button {
 @media (max-width: 900px) {
   .l_wrapper {
     flex-direction: column;
-  }
-
-  .main,
-  .content {
-    width: 100%;
-  }
-
-  .main {
-    height: 35vh;
-  }
-
-  .content {
-    overflow: visible;
   }
 
   .l_col_mobile_12_12 {
@@ -217,5 +209,15 @@ button {
   }
   .l_col_mobile_1_12 {
     width: 8.33333333%;
+  }
+
+  .main {
+    position: relative;
+    width: auto;
+    height: 50vw;
+  }
+
+  .content {
+    margin-left: 0;
   }
 }
