@@ -1,16 +1,310 @@
 /* UA Reset */
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+:root {
+  font-size: 10px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+:root {
+  --gap: 30px;
+  --gap-2x: 60px;
+  --border-width: 2px;
+  --border-width-half: var(--border-width) / 2;
+}
 /* Typography */
+
+.header-title {
+  font-size: 2.4rem;
+}
+
+.header-description {
+  font-size: 1.6rem;
+}
+
+.history-year {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.history-month {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.tab-item {
+  font-size: 1.6rem;
+}
 
 /* Layouts */
 
-/* Components */
-
-/* Mediaqueries */
-@media ( min-width: 1200px ) {
-
+.l_row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
-@media ( max-width: 768px ) {
+.l_col_11_12 {
+  grid-column: span 11;
+}
 
+.l_col_10_12 {
+  grid-column: span 10;
+}
+
+.l_col_9_12 {
+  grid-column: span 9;
+}
+
+.l_col_8_12 {
+  grid-column: span 8;
+}
+
+.l_col_7_12 {
+  grid-column: span 7;
+}
+
+.l_col_6_12 {
+  grid-column: span 6;
+}
+
+.l_col_5_12 {
+  grid-column: span 5;
+}
+
+.l_col_4_12 {
+  grid-column: span 4;
+}
+
+.l_col_3_12 {
+  grid-column: span 3;
+}
+
+.l_col_2_12 {
+  grid-column: span 2;
+}
+
+.l_col_1_12 {
+  grid-column: span 1;
+}
+
+/* Components */
+
+body {
+  background-color: #111111;
+}
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 var(--gap-2x);
+  margin: 0 auto;
+}
+
+.header {
+  border: 1px solid;
+  padding: var(--gap-2x) 0;
+}
+
+.header-title {
+  color: #fff;
+}
+
+.header-description {
+  padding-top: var(--gap);
+  color: #8a8a8a;
+}
+
+.histoty-cover {
+  margin: 0px calc(-1 * var(--gap-2x));
+  height: 300px;
+}
+
+.histoty-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tab {
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.tab-item {
+  padding: 15px 0;
+  display: block;
+  width: 100%;
+  background-color: #444444;
+  color: #959595;
+  letter-spacing: 0.3em;
+}
+
+.tab-item_active {
+  background-color: #ff4500;
+  color: #fff;
+  box-shadow: 0px 0px 12px 1px #ff4500;
+}
+
+.history-menu {
+  margin-bottom: 30px;
+}
+
+.history {
+  position: relative;
+}
+
+.history::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 33.333333%;
+  width: var(--border-width);
+  height: 100%;
+  background-color: #3d3d3d;
+  margin-top: 8px;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.history-item + .history-item {
+  margin-top: var(--gap-2x);
+}
+
+.history-year {
+  text-align: end;
+  position: relative;
+  padding-right: var(--gap);
+  color: #fff;
+}
+
+.history-year::after {
+  content: " ";
+  box-sizing: border-box;
+  --circle: 6px;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  border: var(--circle) solid #ff4500;
+  border-radius: 50%;
+  transform: translateX(calc(50% + var(--border-width-half)));
+}
+
+.history-item-content {
+  padding-left: var(--gap);
+}
+
+.history-month {
+  display: flex;
+  gap: var(--gap);
+}
+
+.history-month + .history-month {
+  margin-top: calc(var(--gap) / 2);
+}
+
+.history-month strong {
+  color: #ff4500;
+  width: 20px;
+}
+
+.history-month span {
+  color: #8a8a8a;
+}
+
+/* Mediaqueries */
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 768px) {
+  .history-year {
+    padding: 0 0 var(--gap) var(--gap);
+  }
+
+  .history-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .history::before {
+    left: 0;
+  }
+
+  .history-year::after {
+    right: auto;
+    left: 0;
+    transform: translateX(calc(-50% + var(--border-width-half)));
+  }
+}
+
+/* animation */
+
+.history-item {
+  opacity: 0;
+}
+
+.history-item:nth-child(1) {
+  animation: fade 0.7s forwards;
+}
+
+.history-item:nth-child(2) {
+  animation: fade 0.7s 1s forwards;
+}
+
+.history-item:nth-child(3) {
+  animation: fade 0.7s 2s forwards;
+}
+
+.history-item:nth-child(4) {
+  animation: fade 0.7s 3s forwards;
+}
+
+.history-item:nth-child(5) {
+  animation: fade 0.7s 4s forwards;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
 }
